@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Print secret value
-        run: echo "Message: ${{ secrets.MY_MESSAGE }}"
+        run: echo "Message ${{ secrets.MY_MESSAGE }}"
 
       - name: Checkout repository
         uses: actions/checkout@v4
