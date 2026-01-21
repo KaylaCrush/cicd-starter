@@ -7,6 +7,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Print secret value
+        run: echo "Message: ${{ secrets.MY_MESSAGE }}"
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -28,6 +31,3 @@ jobs:
         with:
           name: test-report
           path: .
-          
-      - name: Print secret value
-        run: echo "Message: ${{ secrets.MY_MESSAGE }}"
